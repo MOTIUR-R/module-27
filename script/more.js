@@ -13,6 +13,15 @@ function getRandomAlphabet(){
     return alphabet;
 }
 
+function hideElementByID(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+
+function showElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
 
 function  setBgById(elementId){
     const getElement = document.getElementById(elementId);
@@ -21,5 +30,23 @@ function  setBgById(elementId){
 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.add('bg-violet-700');
+    element.classList.remove('bg-violet-700');
+}
+
+function getTextElementValueById(event){
+    const element = document.getElementById(event);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
+function setElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
 }
